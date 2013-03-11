@@ -1,13 +1,9 @@
 Moleskin::Application.routes.draw do
-  resources :users
-
-
-  resources :documents
-
-
   resources :documents do
     resources :cells
   end
+
+  root :to => 'moleskin#index'
 
 
   # The priority is based upon order of creation:
