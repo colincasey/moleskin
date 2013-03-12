@@ -12,7 +12,19 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require codemirror
+//= require codemirror/modes/ruby
 //= require_tree .
 //= require angular.min
-//= require angle-up
 //= require_tree ./angular
+
+$(function() {
+    var codeSections = $('.cell .code');
+    codeSections.each(function() {
+        //var el = $(this);
+        CodeMirror.fromTextArea(this, {
+            mode: 'ruby',
+            theme: 'ambiance'
+        });
+    });
+});

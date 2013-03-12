@@ -1,3 +1,106 @@
-// Place all the styles related to the moleskin controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "compass/css3";
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  text-rendering: optimizeLegibility;
+}
+
+#app {
+  @include display-box;
+  @include box-orient(horizontal);
+  @include box-align(stretch);
+  @include box-direction(reverse);
+  height: 100%;
+}
+
+#main {
+  @include box-flex(7);
+  @include box-align(stretch);
+  background-color: #ffffff;
+  max-width: 800px;
+  overflow: scroll;
+}
+
+#left-sidebar {
+  width: 160px;
+  @include box-align(stretch);
+  background-color: #191818;
+  padding: 1em 0;
+  border-right: 7px solid #eeeeee;
+
+  .write {
+    text-align: center;
+    margin:  2em 0;
+
+    .btn {
+      height: 2.0em;
+      width:  75%;
+      text-transform: uppercase;
+      font-family: Lato;
+    }
+  }
+
+  nav {
+    ul {
+      border-bottom: 1px solid #222;
+    }
+
+    li {
+      & > a {
+        display: block;
+        color: #666;
+        font-family: Lato;
+        font-weight: normal;
+        text-decoration: none;
+        padding: 0.8em 1em;
+        line-height: 24px;
+
+        &:hover {
+          color:  #1abc9c;
+        }
+      }
+
+      &.active > a {
+        color: #fff;
+        background-color: #222;
+      }
+    }
+  }
+}
+
+#main {
+  padding: 3em;
+  color:  #777;
+
+  .page-header {
+    margin-top: 0;
+    font-size: 32px;
+    line-height: 40px;
+    font-family: Lato;
+  }
+
+  .metadata {
+    margin-top: -1em;
+    margin-bottom: 1em;
+    color: #666;
+    font-size: 16px;
+    font-family: Lato;
+
+    .author {
+      font-weight: bold;
+    }
+
+    .created-at {
+      color: #888;
+    }
+  }
+
+  .cell {
+    line-height: 24px;
+  }
+
+  p {
+    margin-bottom: 1em;
+  }
+}

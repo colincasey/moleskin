@@ -1,2 +1,37 @@
-<h1>Moleskin#index</h1>
-<p>Find me in app/views/moleskin/index.html.erb</p>
+<div class="page-header">
+  <h1>Document Name</h1>
+</div>
+
+<div class="metadata">
+  <div class="created-at pull-right">
+    Nov 14
+  </div>
+
+  <div class="author">
+    Colin Casey
+  </div>
+</div>
+
+<div class="cells">
+  <section class="cell">
+    <p><%= lorem_ipsum(p: 1).html_safe %></p>
+    <p><%= lorem_ipsum(p: 1).html_safe %></p>
+    <p><%= lorem_ipsum(p: 1).html_safe %></p>
+  </section>
+
+  <section class="cell">
+    <textarea class="code">
+      # Output "I love Ruby"
+      say = "I love Ruby"
+      puts say
+
+      # Output "I *LOVE* RUBY"
+      say['love'] = "*love*"
+      puts say.upcase
+
+      # Output "I *love* Ruby"
+      # five times
+      5.times { puts say }
+    </textarea>
+  </section>
+</div>

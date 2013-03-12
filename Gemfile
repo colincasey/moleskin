@@ -24,11 +24,13 @@ end
 
 gem 'jquery-rails'
 gem 'angular-rails'
+gem 'codemirror-rails'
 
 group :development do
   gem "better_errors"
   gem "binding_of_caller"
   gem "meta_request"
+  gem "lorem_ipsum_amet"
 end
 
 # To use ActiveModel has_secure_password

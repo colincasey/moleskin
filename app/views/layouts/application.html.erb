@@ -8,7 +8,33 @@
 </head>
 <body>
 
-<%= yield %>
+<div id="app">
+  <div id="main">
+    <%= yield %>
+  </div>
+  <div id="left-sidebar">
+    <div class="write">
+        <button class="btn btn-danger">
+          Write
+        </button>
+    </div>
+
+    <nav id="main-nav">
+      <ul>
+        <li class="active">
+          <a href="#">
+            My Notebooks
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Shared with Me
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
 
 </body>
 </html>
